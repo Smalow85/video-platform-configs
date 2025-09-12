@@ -7,7 +7,30 @@ eureka:
     registry-fetch-interval-seconds: 5
     initial-instance-info-replication-interval-seconds: 5
     heartbeat-interval: 5
-
 spring:
+  datasource:
+    url: jdbc:postgresql://postgresql:5432/scenario_db
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
   kafka:
     bootstrap-servers: kafka:29092
+logging:
+  level:
+    com.example.demo: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+  api-docs:
+    path: /api-docs
+  packagesToScan: com.example.demo
