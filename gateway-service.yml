@@ -1,23 +1,16 @@
 spring:
-  cloud:
-    gateway:
-      globalcors:
-        corsConfigurations:
-          '[/**]':
-            allowedOrigins: "http://localhost"
-            allowedMethods:
-              - GET
-              - POST
-              - PUT
-              - DELETE
-              - OPTIONS
-            allowedHeaders: "*"
-            allowCredentials: true
-      discovery.locator:
-        enabled: true
-        lowerCaseServiceId: true
   security:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://keycloak:8091/realms/ui-realm
+          issuer-uri: http://keycloak:8080/realms/smart-shorts-realm
+          jwk-set-uri: http://keycloak:8080/realms/smart-shorts-realm/protocol/openid-connect/certs
+      client:
+        provider:
+          keycloak:
+            issuer-uri: http://keycloak:8080/realms/smart-shorts-realm
+        registration:
+          keycloak:
+            client-id: smart-shorts-realm-gateway-client
+            client-secret: nwkLZMju8gmi2V4AfDfiyzKTBxSVxyKc
+            authorization-grant-type: client_credentials
