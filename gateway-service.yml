@@ -12,5 +12,5 @@ spring:
         registration:
           keycloak:
             client-id: smart-shorts-realm-gateway-client
-            client-secret: nwkLZMju8gmi2V4AfDfiyzKTBxSVxyKc
+            client-secret: BNDzI8RpAbNqRYTYQGTVStUENQaiSn67
             authorization-grant-type: client_credentials
