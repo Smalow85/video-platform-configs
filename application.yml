@@ -8,7 +8,7 @@ eureka:
     initial-instance-info-replication-interval-seconds: 5
     heartbeat-interval: 5
   instance:
-    metadata-map:
+    metadataMap:
       gRPC.port: 9090
 spring:
   datasource:
