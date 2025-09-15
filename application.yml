@@ -9,7 +9,7 @@ eureka:
     heartbeat-interval: 5
   instance:
     metadataMap:
-      gRPC.port: 9090
+      gRPC_port: 9090
 spring:
   datasource:
     url: jdbc:postgresql://postgresql:5432/scenario_db
