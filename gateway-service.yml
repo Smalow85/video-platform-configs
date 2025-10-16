@@ -8,7 +8,7 @@ spring:
             - Path=/eureka/**
           filters:
             - StripPrefix=1
-        - id: user_service_route
+        - id: kafka_ui_route
           uri: lb://KAFKA-UI
           predicates:
             - Path=/kafka/**
@@ -17,10 +17,11 @@ spring:
         - id: react_ui_fallback_route
           uri: lb://REACT-UI-SERVICE
           predicates:
-            - Path=/** discovery:
-      discovery.locator:
-        enabled: true
-        lowerCaseServiceId: true
+            - Path=/**
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
   security:
     oauth2:
       resourceserver:
