@@ -1,6 +1,23 @@
 spring:
   cloud:
     gateway:
+      routes:
+        - id: eureka_route
+          uri: http://eureka-server:8761
+          predicates:
+            - Path=/eureka/**
+          filters:
+            - StripPrefix=1
+        - id: user_service_route
+          uri: lb://KAFKA-UI
+          predicates:
+            - Path=/kafka/**
+          filters:
+            - StripPrefix=1
+        - id: react_ui_fallback_route
+          uri: lb://REACT-UI-SERVICE
+          predicates:
+            - Path=/** discovery:
       discovery.locator:
         enabled: true
         lowerCaseServiceId: true
