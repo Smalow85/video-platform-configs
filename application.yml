@@ -26,7 +26,7 @@ spring:
     locations: classpath:db/migration
     baseline-on-migrate: true
   kafka:
-    bootstrap-servers: kafka:29092
+    bootstrap-servers: smart-kafka:29092
 logging:
   level:
     com.example.demo: DEBUG
