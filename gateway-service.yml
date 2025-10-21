@@ -26,14 +26,4 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://keycloak:8080/realms/smart-shorts-realm
-          jwk-set-uri: http://keycloak:8080/realms/smart-shorts-realm/protocol/openid-connect/certs
-      client:
-        provider:
-          keycloak:
-            issuer-uri: http://keycloak:8080/realms/smart-shorts-realm
-        registration:
-          keycloak:
-            client-id: smart-shorts-realm-gateway-client
-            client-secret: nQQ5GBOInFuQbIaxW4nlT3u5KZjOkizk
-            authorization-grant-type: client_credentials
+          issuer-uri: http://localhost:30880/realms/smart-shorts-realm
