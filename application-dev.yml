@@ -3,7 +3,13 @@ spring:
     username: user
     password: password
 management:
-  endpoints:
-    web:
-      exposure:
-        include:
+  endpoint:
+    health:
+      show-details: always
+      probes:
+        enabled: true
+    endpoints:
+      web:
+        exposure:
+          include: health,liveness,readiness
+        base-path: /actuator
