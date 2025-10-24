@@ -14,12 +14,10 @@ spring:
             - Path=/kafka/**
           filters:
             - StripPrefix=1
-        - id: video-fragments-service-route
-          uri: lb://VIDEO-FRAGMENTS-SERVICE
+        - id: video-aggregation-service-route
+          uri: lb://VIDEO-AGGREGATION-SERVICE
           predicates:
             - Path=/video-aggregation-service/**
-          filters:
-            - StripPrefix=1 
         - id: react_ui_fallback_route
           uri: lb://REACT-UI-SERVICE
           predicates:
