@@ -9,7 +9,7 @@ spring:
           filters:
             - StripPrefix=1
         - id: kafka_ui_route
-          uri: lb://KAFKA-UI
+          uri: http://kafka-ui:8080
           predicates:
             - Path=/kafka/**
           filters:
