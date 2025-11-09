@@ -18,6 +18,10 @@ spring:
           uri: lb://VIDEO-AGGREGATION-SERVICE
           predicates:
             - Path=/video-aggregation-service/**
+        - id: scenario-service-route
+          uri: lb://SCENARIO-SERVICE
+          predicates:
+            - Path=/scenario-service/**
         - id: react_ui_fallback_route
           uri: lb://REACT-UI-SERVICE
           predicates:
