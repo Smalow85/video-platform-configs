@@ -25,6 +25,8 @@ spring:
     enabled: true
     locations: classpath:db/migration
     baseline-on-migrate: true
+    schemas: public
+    default-schema: public
   kafka:
     bootstrap-servers: smart-kafka:29092
 logging:
