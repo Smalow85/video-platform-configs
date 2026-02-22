@@ -55,6 +55,6 @@ spring:
           registration:
             keycloak:
               client-id: gateway-service
-              client-secret: RDeBSsFDJM9Gu7LojV6Rjnd0ukRBPIX4
+              client-secret: lkbuIDFHvt1LwSH1b8jJBSq2Qn2BmIXf
               authorization-grant-type: client_credentials
               scope: openid
