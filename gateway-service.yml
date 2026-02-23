@@ -28,7 +28,7 @@ spring:
           predicates:
             - Path=/api/video-aggregation-service/**
           filters:
-            - StripPrefix=1
+            - StripPrefix=2
         - id: scenario-service-route
           uri: lb://SCENARIO-SERVICE
           predicates:
