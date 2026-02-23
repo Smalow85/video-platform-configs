@@ -49,8 +49,8 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://localhost:30880/realms/smart-shorts-realm
-          jwk-set-uri: http://keycloak:8080/realms/smart-shorts-realm/protocol/openid-connect/certs
+          issuer-uri: https://smartshorts.duckdns.org/auth/realms/smart-shorts-realm
+          jwk-set-uri: http://keycloak:8080/auth/realms/smart-shorts-realm/protocol/openid-connect/certs
         client:
           registration:
             keycloak:
