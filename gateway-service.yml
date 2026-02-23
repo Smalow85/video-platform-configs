@@ -38,7 +38,7 @@ spring:
           predicates:
             - Path=/video-fragments-service/**
         - id: react_ui_fallback_route
-          uri: lb://REACT-UI-SERVICE
+          uri: http://react-ui-service:80
           predicates:
             - Path=/**
       discovery:
