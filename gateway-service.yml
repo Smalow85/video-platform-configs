@@ -20,9 +20,9 @@ spring:
         - id: kafka_ui_route
           uri: http://kafka-ui:8080
           predicates:
-            - Path=/kafka/**
+            - Path=/api/kafka/**
           filters:
-            - StripPrefix=1
+            - StripPrefix=2
         - id: video-aggregation-service-route
           uri: lb://VIDEO-AGGREGATION-SERVICE
           predicates:
@@ -37,6 +37,12 @@ spring:
           uri: lb://VIDEO-FRAGMENTS-SERVICE
           predicates:
             - Path=/video-fragments-service/**
+        - id: input-service-route
+          uri: lb://INPUT-SERVICE
+          predicates:
+            - Path=/input-service/**
+          filters:
+            - StripPrefix=2
         - id: react_ui_fallback_route
           uri: http://react-ui-service:80
           predicates:
