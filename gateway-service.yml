@@ -40,7 +40,7 @@ spring:
         - id: input-service-route
           uri: lb://INPUT-SERVICE
           predicates:
-            - Path=/input-service/**
+            - Path=/api/input-service/**
           filters:
             - StripPrefix=2
         - id: react_ui_fallback_route
