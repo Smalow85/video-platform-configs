@@ -36,7 +36,9 @@ spring:
         - id: video-fragments-service-route
           uri: lb://VIDEO-FRAGMENTS-SERVICE
           predicates:
-            - Path=/video-fragments-service/**
+            - Path=/api/video-fragments-service/**
+          filters:
+            - StripPrefix=2
         - id: input-service-route
           uri: lb://INPUT-SERVICE
           predicates:
