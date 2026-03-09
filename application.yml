@@ -43,3 +43,6 @@ springdoc:
   api-docs:
     path: /api-docs
   packagesToScan: com.example.demo
+gcp:
+  bucket:
+    name: smart-shorts-videos-2
